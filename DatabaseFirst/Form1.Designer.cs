@@ -174,6 +174,7 @@ namespace DatabaseFirst
             this.btnContains.TabIndex = 2;
             this.btnContains.Text = "Contain";
             this.btnContains.UseVisualStyleBackColor = true;
+            this.btnContains.Click += new System.EventHandler(this.btnContains_Click);
             // 
             // btnStartWith
             // 

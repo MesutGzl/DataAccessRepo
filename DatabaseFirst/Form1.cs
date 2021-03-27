@@ -133,5 +133,18 @@ namespace DatabaseFirst
                                         x.UnitPrice,
                                       }).ToList();
         }
+
+        private void btnContains_Click(object sender, EventArgs e)
+        {
+            //Contains() methodu koleksiyonda bulunan verilerin, belirlenen koşula göre olup olmadığını kontrol eder.
+            //Örnek olarak ülke olarak USA olarak kayıtlı çalışanlarımın adı soyadı ve ülke bilgilerini listeledik
+            dataGridView1.DataSource = db.Employees.Where(x => x.Country.Contains("USA"))
+                                                   .Select(x=> new
+                                                   {
+                                                       x.FirstName,
+                                                       x.LastName,
+                                                       x.Country
+                                                   }).ToList();
+        }
     }
 }
