@@ -175,5 +175,20 @@ namespace DatabaseFirst
                 MessageBox.Show("Aradığınız ürün bulunmamaktadır.");
             }
         }
+
+        private void btnTake_Click(object sender, EventArgs e)
+        {
+            //Take() Methodu içerisine verdiğimiz parametre kadar olan satırdaki verileri bize getirir.
+            //Örnek olarak Birim fiyatı en düşük olan 3 ürünü listelemek istersek
+            dataGridView1.DataSource = db.Products.OrderBy(x => x.UnitPrice)
+                          .Take(3)
+                          .Select(x => new
+                          {
+                              x.ProductID,
+                              x.ProductName,
+                              x.UnitPrice,
+                          }).ToList();
+        }
     }
+    
 }

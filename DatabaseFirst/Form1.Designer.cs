@@ -156,6 +156,7 @@ namespace DatabaseFirst
             this.btnTake.TabIndex = 2;
             this.btnTake.Text = "Take";
             this.btnTake.UseVisualStyleBackColor = true;
+            this.btnTake.Click += new System.EventHandler(this.btnTake_Click);
             // 
             // btnSkip
             // 
