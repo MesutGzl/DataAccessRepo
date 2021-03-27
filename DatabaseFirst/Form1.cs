@@ -146,5 +146,19 @@ namespace DatabaseFirst
                                                        x.Country
                                                    }).ToList();
         }
+
+        private void btnStartWith_Click(object sender, EventArgs e)
+        {
+            //StarWith() methodu içerisine parametere olarak verilen harf ile bir kelimenin başlayıp başlamadığını kontrol eder.
+            //İsminin baş harfi R ile başlayan çalışanlarımın listesi
+            dataGridView1.DataSource = db.Employees.Where(x => x.FirstName.StartsWith("r")).ToList();
+        }
+
+        private void btnEndWith_Click(object sender, EventArgs e)
+        {
+            //EndWith() methodu içerisine parametere olarak verilen harf ile bir kelimenin başlayıp başlamadığını kontrol eder.
+            //Soyadının son harfi G ile biten çalışanlarımın listesi
+            dataGridView1.DataSource = db.Employees.Where(x => x.LastName.EndsWith("g")).ToList();
+        }
     }
 }

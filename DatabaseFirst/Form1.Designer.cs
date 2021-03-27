@@ -184,6 +184,7 @@ namespace DatabaseFirst
             this.btnStartWith.TabIndex = 2;
             this.btnStartWith.Text = "Start With";
             this.btnStartWith.UseVisualStyleBackColor = true;
+            this.btnStartWith.Click += new System.EventHandler(this.btnStartWith_Click);
             // 
             // btnEndWith
             // 
@@ -193,6 +194,7 @@ namespace DatabaseFirst
             this.btnEndWith.TabIndex = 2;
             this.btnEndWith.Text = "End With";
             this.btnEndWith.UseVisualStyleBackColor = true;
+            this.btnEndWith.Click += new System.EventHandler(this.btnEndWith_Click);
             // 
             // btnSelect
             // 
