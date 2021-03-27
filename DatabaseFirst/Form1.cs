@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.SqlServer;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -202,6 +203,19 @@ namespace DatabaseFirst
             //Sum() methodu koleksiyonda bulunan sayı değerlerinin toplamını sağlayan metotdur.
             int? totalStock = db.Products.Sum(x => x.UnitsInStock);
             MessageBox.Show($"Stok durumu : {totalStock}");   
+        }
+
+        private void btnDateDiff_Click(object sender, EventArgs e)
+        {
+            //DateDiff() Tarihler ile ilgili olan hesaplamalarımızda bize yardımcı olur. Gün ay ve yıl olarak kayıtlı olan verilerin herhangi birini kullanarak yapmak istediğimiz işlemde bize yardımcı olur.
+            //Örnek olarak çalışanlarımızın yaşlarını hesaplayıp gelen verinin belirlediğimiz sütuna yazdıralım
+            //SQLFunctions'u kullanabilmek için namespace'ini eklememiz gerekmektedir.
+            dataGridView1.DataSource = db.Employees.Select(x => new
+            {
+                FirstName = x.FirstName,
+                Lastname = x.LastName,
+                Age = SqlFunctions.DateDiff("Year", x.BirthDate, DateTime.Now) 
+            }).ToList();
         }
     }
     

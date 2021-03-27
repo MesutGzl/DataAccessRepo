@@ -49,8 +49,7 @@ namespace DatabaseFirst
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnSum = new System.Windows.Forms.Button();
             this.btnCount = new System.Windows.Forms.Button();
-            this.btnMax = new System.Windows.Forms.Button();
-            this.btnMin = new System.Windows.Forms.Button();
+            this.btnDateDiff = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -76,7 +75,7 @@ namespace DatabaseFirst
             // 
             // btnAverage
             // 
-            this.btnAverage.Location = new System.Drawing.Point(379, 19);
+            this.btnAverage.Location = new System.Drawing.Point(286, 19);
             this.btnAverage.Name = "btnAverage";
             this.btnAverage.Size = new System.Drawing.Size(87, 43);
             this.btnAverage.TabIndex = 2;
@@ -241,11 +240,10 @@ namespace DatabaseFirst
             this.groupBox2.Controls.Add(this.btnSum);
             this.groupBox2.Controls.Add(this.btnCount);
             this.groupBox2.Controls.Add(this.btnAverage);
-            this.groupBox2.Controls.Add(this.btnMax);
-            this.groupBox2.Controls.Add(this.btnMin);
+            this.groupBox2.Controls.Add(this.btnDateDiff);
             this.groupBox2.Location = new System.Drawing.Point(12, 328);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(476, 76);
+            this.groupBox2.Size = new System.Drawing.Size(387, 76);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Aggregate Functions";
@@ -270,23 +268,15 @@ namespace DatabaseFirst
             this.btnCount.UseVisualStyleBackColor = true;
             this.btnCount.Click += new System.EventHandler(this.btnCount_Click);
             // 
-            // btnMax
+            // btnDateDiff
             // 
-            this.btnMax.Location = new System.Drawing.Point(286, 19);
-            this.btnMax.Name = "btnMax";
-            this.btnMax.Size = new System.Drawing.Size(87, 43);
-            this.btnMax.TabIndex = 2;
-            this.btnMax.Text = "Max";
-            this.btnMax.UseVisualStyleBackColor = true;
-            // 
-            // btnMin
-            // 
-            this.btnMin.Location = new System.Drawing.Point(193, 19);
-            this.btnMin.Name = "btnMin";
-            this.btnMin.Size = new System.Drawing.Size(87, 43);
-            this.btnMin.TabIndex = 2;
-            this.btnMin.Text = "Min";
-            this.btnMin.UseVisualStyleBackColor = true;
+            this.btnDateDiff.Location = new System.Drawing.Point(193, 19);
+            this.btnDateDiff.Name = "btnDateDiff";
+            this.btnDateDiff.Size = new System.Drawing.Size(87, 43);
+            this.btnDateDiff.TabIndex = 2;
+            this.btnDateDiff.Text = "DateDiff";
+            this.btnDateDiff.UseVisualStyleBackColor = true;
+            this.btnDateDiff.Click += new System.EventHandler(this.btnDateDiff_Click);
             // 
             // Form1
             // 
@@ -327,8 +317,7 @@ namespace DatabaseFirst
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnSum;
         private System.Windows.Forms.Button btnCount;
-        private System.Windows.Forms.Button btnMax;
-        private System.Windows.Forms.Button btnMin;
+        private System.Windows.Forms.Button btnDateDiff;
     }
 }
 
