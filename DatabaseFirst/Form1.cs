@@ -73,5 +73,16 @@ namespace DatabaseFirst
                               x.UnitsInStock
                           }).ToList();
         }
+
+        private void btnGroupBy_Click(object sender, EventArgs e)
+        {
+            //GroupBy() Sorgu sonucu dönen verinin tarafımızca verilen isim atında gruplanmasını sağlar.
+            //Örnek olarak hangi kategoride kaç adet ürün stoğumuz var sorgusu 
+            dataGridView1.DataSource = db.Products.GroupBy(x => x.Category.CategoryName)
+                                                  .Select(x => new
+                                                  {   KategoriAdi = x.Key,
+                                                      ToplamStok = x.Sum(z => z.UnitsInStock)
+                                                  }).ToList();
+        }
     }
 }

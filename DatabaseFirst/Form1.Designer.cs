@@ -116,6 +116,7 @@ namespace DatabaseFirst
             this.btnGroupBy.TabIndex = 2;
             this.btnGroupBy.Text = "GroupBy";
             this.btnGroupBy.UseVisualStyleBackColor = true;
+            this.btnGroupBy.Click += new System.EventHandler(this.btnGroupBy_Click);
             // 
             // btnFirst
             // 
