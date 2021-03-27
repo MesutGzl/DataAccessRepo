@@ -252,7 +252,7 @@ namespace DatabaseFirst
             // 
             // btnSum
             // 
-            this.btnSum.Location = new System.Drawing.Point(7, 19);
+            this.btnSum.Location = new System.Drawing.Point(100, 19);
             this.btnSum.Name = "btnSum";
             this.btnSum.Size = new System.Drawing.Size(87, 43);
             this.btnSum.TabIndex = 2;
@@ -261,12 +261,13 @@ namespace DatabaseFirst
             // 
             // btnCount
             // 
-            this.btnCount.Location = new System.Drawing.Point(100, 19);
+            this.btnCount.Location = new System.Drawing.Point(7, 19);
             this.btnCount.Name = "btnCount";
             this.btnCount.Size = new System.Drawing.Size(87, 43);
             this.btnCount.TabIndex = 2;
             this.btnCount.Text = "Count";
             this.btnCount.UseVisualStyleBackColor = true;
+            this.btnCount.Click += new System.EventHandler(this.btnCount_Click);
             // 
             // btnMin
             // 

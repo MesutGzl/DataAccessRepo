@@ -189,6 +189,13 @@ namespace DatabaseFirst
                               x.UnitPrice,
                           }).ToList();
         }
+
+        private void btnCount_Click(object sender, EventArgs e)
+        {
+            //Count() methodu veri tabanında bulunan istenen tablonun satırları sayar.
+            int result = db.Orders.Count();
+            MessageBox.Show($"Toplam sipariş adedi : {result}");
+        }
     }
     
 }
