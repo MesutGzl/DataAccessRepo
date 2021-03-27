@@ -32,5 +32,17 @@ namespace DatabaseFirst
             //Örneğin veri tabanında Stokta bulunan adetleri 30 ve üzeri olan ürünleri listeledik.
             dataGridView1.DataSource = db.Products.Where(x => x.UnitsInStock >= 30).ToList();
         }
+
+        private void btnSelect_Click(object sender, EventArgs e)
+        {
+            //Select() Veri tabanından gelen veri kümesinin içerisinde bulunan sütunları filtrelemek için kullanılır. 
+            //Örneğin veri tabanında Stokta bulunan adetleri 30 ve üzerinde olan ürünlerin ID numarası, ürün ismi ve fiyat sütunları ile listelenmesini istedik
+            dataGridView1.DataSource = db.Products.Where(x => x.UnitsInStock >= 30)
+                                                  .Select(x => new
+                                                  {   x.ProductID,
+                                                      x.ProductName,
+                                                      x.UnitPrice
+                                                  }).ToList();
+        }
     }
 }
