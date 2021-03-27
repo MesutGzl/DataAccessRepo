@@ -44,5 +44,20 @@ namespace DatabaseFirst
                                                       x.UnitPrice
                                                   }).ToList();
         }
+
+        private void btnOrderByDesc_Click(object sender, EventArgs e)
+        {
+            //OrderByDescending() Bu method veri tabanından gelen veri kümesnin belirtilen sütunundaki verilerin çoktan aza  doğru sıralanmış halde listelememizi sağlar.
+            //Örneğin Veri tabanındaki ürünlerden fiyatı 50 den büyük olan ürünlerin id,ürün adi, fiyati ve stok adeti bilgilerini isteyip stoktaki adet miktarımım çoktan aza doğru sıralanmış halde karşımıza getirilmesini sağladık.
+            dataGridView1.DataSource = db.Products.Where(x => x.UnitPrice > 50)
+                                      .OrderByDescending(x => x.UnitsInStock)
+                                      .Select(x => new
+                                      {
+                                          x.ProductID,
+                                          x.ProductName,
+                                          x.UnitPrice,
+                                          x.UnitsInStock
+                                      }).ToList();
+        }
     }
 }

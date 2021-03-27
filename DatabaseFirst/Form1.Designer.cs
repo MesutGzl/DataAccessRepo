@@ -96,6 +96,7 @@ namespace DatabaseFirst
             this.btnOrderByDesc.TabIndex = 2;
             this.btnOrderByDesc.Text = "Order By Descending";
             this.btnOrderByDesc.UseVisualStyleBackColor = true;
+            this.btnOrderByDesc.Click += new System.EventHandler(this.btnOrderByDesc_Click);
             // 
             // btnOrderBy
             // 
