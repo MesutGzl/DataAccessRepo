@@ -31,7 +31,7 @@ namespace DatabaseFirst
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnToList = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAverage = new System.Windows.Forms.Button();
             this.btnWhere = new System.Windows.Forms.Button();
             this.btnOrderByDesc = new System.Windows.Forms.Button();
             this.btnOrderBy = new System.Windows.Forms.Button();
@@ -47,8 +47,13 @@ namespace DatabaseFirst
             this.btnSelect = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnSum = new System.Windows.Forms.Button();
+            this.btnCount = new System.Windows.Forms.Button();
+            this.btnMin = new System.Windows.Forms.Button();
+            this.btnMax = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -69,14 +74,14 @@ namespace DatabaseFirst
             this.btnToList.UseVisualStyleBackColor = true;
             this.btnToList.Click += new System.EventHandler(this.btnToList_Click);
             // 
-            // button1
+            // btnAverage
             // 
-            this.button1.Location = new System.Drawing.Point(777, 632);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAverage.Location = new System.Drawing.Point(379, 19);
+            this.btnAverage.Name = "btnAverage";
+            this.btnAverage.Size = new System.Drawing.Size(87, 43);
+            this.btnAverage.TabIndex = 2;
+            this.btnAverage.Text = "Average";
+            this.btnAverage.UseVisualStyleBackColor = true;
             // 
             // btnWhere
             // 
@@ -233,12 +238,53 @@ namespace DatabaseFirst
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnSum);
+            this.groupBox2.Controls.Add(this.btnCount);
+            this.groupBox2.Controls.Add(this.btnAverage);
+            this.groupBox2.Controls.Add(this.btnMax);
+            this.groupBox2.Controls.Add(this.btnMin);
             this.groupBox2.Location = new System.Drawing.Point(12, 328);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(660, 171);
+            this.groupBox2.Size = new System.Drawing.Size(476, 76);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Aggregate Functions";
+            // 
+            // btnSum
+            // 
+            this.btnSum.Location = new System.Drawing.Point(7, 19);
+            this.btnSum.Name = "btnSum";
+            this.btnSum.Size = new System.Drawing.Size(87, 43);
+            this.btnSum.TabIndex = 2;
+            this.btnSum.Text = "Sum";
+            this.btnSum.UseVisualStyleBackColor = true;
+            // 
+            // btnCount
+            // 
+            this.btnCount.Location = new System.Drawing.Point(100, 19);
+            this.btnCount.Name = "btnCount";
+            this.btnCount.Size = new System.Drawing.Size(87, 43);
+            this.btnCount.TabIndex = 2;
+            this.btnCount.Text = "Count";
+            this.btnCount.UseVisualStyleBackColor = true;
+            // 
+            // btnMin
+            // 
+            this.btnMin.Location = new System.Drawing.Point(193, 19);
+            this.btnMin.Name = "btnMin";
+            this.btnMin.Size = new System.Drawing.Size(87, 43);
+            this.btnMin.TabIndex = 2;
+            this.btnMin.Text = "Min";
+            this.btnMin.UseVisualStyleBackColor = true;
+            // 
+            // btnMax
+            // 
+            this.btnMax.Location = new System.Drawing.Point(286, 19);
+            this.btnMax.Name = "btnMax";
+            this.btnMax.Size = new System.Drawing.Size(87, 43);
+            this.btnMax.TabIndex = 2;
+            this.btnMax.Text = "Max";
+            this.btnMax.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -247,12 +293,12 @@ namespace DatabaseFirst
             this.ClientSize = new System.Drawing.Size(928, 710);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -261,7 +307,7 @@ namespace DatabaseFirst
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnToList;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAverage;
         private System.Windows.Forms.Button btnWhere;
         private System.Windows.Forms.Button btnOrderByDesc;
         private System.Windows.Forms.Button btnOrderBy;
@@ -277,6 +323,10 @@ namespace DatabaseFirst
         private System.Windows.Forms.Button btnSelect;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button btnSum;
+        private System.Windows.Forms.Button btnCount;
+        private System.Windows.Forms.Button btnMax;
+        private System.Windows.Forms.Button btnMin;
     }
 }
 
