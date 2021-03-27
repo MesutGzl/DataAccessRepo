@@ -105,5 +105,20 @@ namespace DatabaseFirst
             }
             //Birim fiyatı 100 den fazla olan ürün bulunmadığı için catch bloğu içerisindeki MessageBox çalışacaktır.
         }
+
+        private void btnFirstOrDefault_Click(object sender, EventArgs e)
+        {
+            //Bu method First() ile aynı şekilde çalışmaktadır. Tek farkı karşılık olarak bir değer bulamaz ise yani null ise hata verip programı durdurmaz. Karşımıza değer olarak null getirir. Bu durumdaki kontrolü de if blokları ile yapabiliriz.
+
+            Product product = db.Products.FirstOrDefault(x => x.ProductID > 5);
+            if (product != null)
+            {
+                MessageBox.Show($"Aradaığınız ürünün adı {product.ProductName}");
+            }
+            else
+            {
+                MessageBox.Show("Aradığınız ürün bulunmamaktadır.");
+            }
+        }
     }
 }
