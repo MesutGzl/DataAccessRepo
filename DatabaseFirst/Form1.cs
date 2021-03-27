@@ -217,6 +217,13 @@ namespace DatabaseFirst
                 Age = SqlFunctions.DateDiff("Year", x.BirthDate, DateTime.Now) 
             }).ToList();
         }
+
+        private void btnAverage_Click(object sender, EventArgs e)
+        {
+            //Average() methodu adındanda anlaşılacağı gibi ortalama almaktadır.
+            //Ürünlerimizin birim fiyatlarının ortalaması 
+            MessageBox.Show($"Ortalama Birim Fiyat : {db.Products.Average(x => x.UnitPrice)}");
+        }
     }
     
 }

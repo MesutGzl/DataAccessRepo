@@ -81,6 +81,7 @@ namespace DatabaseFirst
             this.btnAverage.TabIndex = 2;
             this.btnAverage.Text = "Average";
             this.btnAverage.UseVisualStyleBackColor = true;
+            this.btnAverage.Click += new System.EventHandler(this.btnAverage_Click);
             // 
             // btnWhere
             // 
