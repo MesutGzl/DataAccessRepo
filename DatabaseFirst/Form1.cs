@@ -193,8 +193,15 @@ namespace DatabaseFirst
         private void btnCount_Click(object sender, EventArgs e)
         {
             //Count() methodu veri tabanında bulunan istenen tablonun satırları sayar.
-            int result = db.Orders.Count();
-            MessageBox.Show($"Toplam sipariş adedi : {result}");
+            int totalOrders = db.Orders.Count();
+            MessageBox.Show($"Toplam sipariş : {totalOrders}");
+        }
+
+        private void btnSum_Click(object sender, EventArgs e)
+        {
+            //Sum() methodu koleksiyonda bulunan sayı değerlerinin toplamını sağlayan metotdur.
+            int? totalStock = db.Products.Sum(x => x.UnitsInStock);
+            MessageBox.Show($"Stok durumu : {totalStock}");   
         }
     }
     

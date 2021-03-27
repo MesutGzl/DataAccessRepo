@@ -49,8 +49,8 @@ namespace DatabaseFirst
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnSum = new System.Windows.Forms.Button();
             this.btnCount = new System.Windows.Forms.Button();
-            this.btnMin = new System.Windows.Forms.Button();
             this.btnMax = new System.Windows.Forms.Button();
+            this.btnMin = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -258,6 +258,7 @@ namespace DatabaseFirst
             this.btnSum.TabIndex = 2;
             this.btnSum.Text = "Sum";
             this.btnSum.UseVisualStyleBackColor = true;
+            this.btnSum.Click += new System.EventHandler(this.btnSum_Click);
             // 
             // btnCount
             // 
@@ -269,15 +270,6 @@ namespace DatabaseFirst
             this.btnCount.UseVisualStyleBackColor = true;
             this.btnCount.Click += new System.EventHandler(this.btnCount_Click);
             // 
-            // btnMin
-            // 
-            this.btnMin.Location = new System.Drawing.Point(193, 19);
-            this.btnMin.Name = "btnMin";
-            this.btnMin.Size = new System.Drawing.Size(87, 43);
-            this.btnMin.TabIndex = 2;
-            this.btnMin.Text = "Min";
-            this.btnMin.UseVisualStyleBackColor = true;
-            // 
             // btnMax
             // 
             this.btnMax.Location = new System.Drawing.Point(286, 19);
@@ -286,6 +278,15 @@ namespace DatabaseFirst
             this.btnMax.TabIndex = 2;
             this.btnMax.Text = "Max";
             this.btnMax.UseVisualStyleBackColor = true;
+            // 
+            // btnMin
+            // 
+            this.btnMin.Location = new System.Drawing.Point(193, 19);
+            this.btnMin.Name = "btnMin";
+            this.btnMin.Size = new System.Drawing.Size(87, 43);
+            this.btnMin.TabIndex = 2;
+            this.btnMin.Text = "Min";
+            this.btnMin.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
