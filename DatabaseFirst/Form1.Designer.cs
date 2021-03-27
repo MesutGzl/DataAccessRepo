@@ -126,6 +126,7 @@ namespace DatabaseFirst
             this.btnFirst.TabIndex = 2;
             this.btnFirst.Text = "First";
             this.btnFirst.UseVisualStyleBackColor = true;
+            this.btnFirst.Click += new System.EventHandler(this.btnFirst_Click);
             // 
             // btnFirstOrDefault
             // 

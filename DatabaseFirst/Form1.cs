@@ -84,5 +84,26 @@ namespace DatabaseFirst
                                                       ToplamStok = x.Sum(z => z.UnitsInStock)
                                                   }).ToList();
         }
+
+        private void btnFirst_Click(object sender, EventArgs e)
+        {
+            //First() methodu yaptığımız sorgu sonucunda bize dönen veri kümesindeki ilk elemanı getirir.
+            Product product = db.Products.First(x => x.UnitPrice > 20);
+            MessageBox.Show($"Fiyatı 20 den büyük olan ilk ürün : {product.ProductName}");
+
+            //Eğer yaptığımız sorgu sonucunda karşımıza bir ürün çıkmasaydı uygulamamız hata alıp kapanacaktı. Bu durumda Try Catch blokları kullanarak uygulamanın durmasını engelleyebiliriz.
+
+            try
+            {
+                Product product1 = db.Products.First(x => x.UnitPrice > 1000);
+                MessageBox.Show($"Fiyatı 1000 den büyük olan ilk ürün : {product1.ProductName}");
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Aradığınız kriterde ürün bulunmmaktadır.");
+            }
+            //Birim fiyatı 100 den fazla olan ürün bulunmadığı için catch bloğu içerisindeki MessageBox çalışacaktır.
+        }
     }
 }
