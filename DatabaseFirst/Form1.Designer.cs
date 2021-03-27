@@ -106,6 +106,7 @@ namespace DatabaseFirst
             this.btnOrderBy.TabIndex = 2;
             this.btnOrderBy.Text = "Order By";
             this.btnOrderBy.UseVisualStyleBackColor = true;
+            this.btnOrderBy.Click += new System.EventHandler(this.btnOrderBy_Click);
             // 
             // btnGroupBy
             // 

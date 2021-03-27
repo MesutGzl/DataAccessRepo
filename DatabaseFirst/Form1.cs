@@ -59,5 +59,19 @@ namespace DatabaseFirst
                                           x.UnitsInStock
                                       }).ToList();
         }
+
+        private void btnOrderBy_Click(object sender, EventArgs e)
+        {
+            //OrderBy Bu method OrderByDescending'e benzer şekilde çalışır. Tek farkı sıralamayı azdan çoka doğru sıralamasını yapar.
+            dataGridView1.DataSource = db.Products.Where(x => x.UnitPrice > 50)
+                          .OrderBy(x => x.UnitsInStock)
+                          .Select(x => new
+                          {
+                              x.ProductID,
+                              x.ProductName,
+                              x.UnitPrice,
+                              x.UnitsInStock
+                          }).ToList();
+        }
     }
 }
