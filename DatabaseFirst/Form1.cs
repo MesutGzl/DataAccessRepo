@@ -160,5 +160,20 @@ namespace DatabaseFirst
             //Soyadının son harfi G ile biten çalışanlarımın listesi
             dataGridView1.DataSource = db.Employees.Where(x => x.LastName.EndsWith("g")).ToList();
         }
+
+        private void btnFind_Click(object sender, EventArgs e)
+        {
+            //Find() verilen parametrenin karşılığının veri tabanında olup olmadığını kontrol eder. Bu yöntem Id sütunu kontolü yapmak için birebirdir.
+            //Ürün id'si 15 olan ürünü bulup listelemesini istedik
+            Product product = db.Products.Find(15);
+            if (product != null)
+            {
+                MessageBox.Show($"Aradığınız ürün {product.ProductName}");
+            }
+            else
+            {
+                MessageBox.Show("Aradığınız ürün bulunmamaktadır.");
+            }
+        }
     }
 }
