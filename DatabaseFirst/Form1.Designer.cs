@@ -86,6 +86,7 @@ namespace DatabaseFirst
             this.btnWhere.TabIndex = 2;
             this.btnWhere.Text = "Where";
             this.btnWhere.UseVisualStyleBackColor = true;
+            this.btnWhere.Click += new System.EventHandler(this.btnWhere_Click);
             // 
             // btnOrderByDesc
             // 
