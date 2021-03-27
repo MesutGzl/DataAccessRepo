@@ -164,6 +164,7 @@ namespace DatabaseFirst
             this.btnSkip.TabIndex = 2;
             this.btnSkip.Text = "Skip";
             this.btnSkip.UseVisualStyleBackColor = true;
+            this.btnSkip.Click += new System.EventHandler(this.btnSkip_Click);
             // 
             // btnContains
             // 

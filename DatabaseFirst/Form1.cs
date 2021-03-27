@@ -120,5 +120,18 @@ namespace DatabaseFirst
                 MessageBox.Show("Aradığınız ürün bulunmamaktadır.");
             }
         }
+
+        private void btnSkip_Click(object sender, EventArgs e)
+        {
+            //Skip() methodu sorgu sonucunda dönen veri grubundan istediğimiz kadar satırı atlatmamıza yardıcı olur.
+            //Örneğin Ürünlerimizi birim fiyatlarını azdan çoka doğru sıralarken ilk 5 ürünü atlayıp öyle listeliyoruz.
+            dataGridView1.DataSource = db.Products.OrderBy(x => x.UnitPrice)
+                                      .Skip(5)
+                                      .Select(x => new
+                                      { x.ProductID,
+                                        x.ProductName,
+                                        x.UnitPrice,
+                                      }).ToList();
+        }
     }
 }
