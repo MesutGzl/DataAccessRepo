@@ -6,6 +6,7 @@ namespace BasicDatabaseWithCodeFirst.Entities.Concrete
 {
     public class Customer : BaseEntity
     {
+        ////Databasemizde Category adında bir tablo açıp içerisindeki sütunları belirledik.
         [Required]
         public string CompanyName { get; set; }
         [Required]

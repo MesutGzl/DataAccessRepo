@@ -9,6 +9,7 @@ namespace BasicDatabaseWithCodeFirst.Entities.Concrete
 {
     public class Employee : BaseEntity
     {
+        ////Databasemizde Employee adında bir tablo açıp içerisindeki sütunları belirledik.
         [Required]
         public string LastName { get; set; }
         [Required]

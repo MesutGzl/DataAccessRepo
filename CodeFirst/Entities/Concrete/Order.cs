@@ -7,10 +7,11 @@ namespace BasicDatabaseWithCodeFirst.Entities.Concrete
 {
     public class Order : BaseEntity
     {
-        public int CustomerID { get; set; }
-        public virtual Customer Customer { get; set; }
+        ////Databasemizde Order adında bir tablo açıp içerisindeki sütunları belirledik.
+        public int CustomerID { get; set; } 
+        public virtual Customer Customer { get; set; } //Customer classımızın içerisinde CustomerID'yi aldık.
         public int EmployeeID { get; set; }
-        public virtual Employee Employee { get; set; }
+        public virtual Employee Employee { get; set; } //Employee classımızın içerisinde EmployeeID'yi aldık.
         [Required]
         public DateTime OrderDate { get; set; }
         [Required]
@@ -19,7 +20,7 @@ namespace BasicDatabaseWithCodeFirst.Entities.Concrete
         public DateTime ShippedDate { get; set; }
 
         public int ShipperID { get; set; }
-        public virtual Shipper Shipper { get; set; }
+        public virtual Shipper Shipper { get; set; }//Shipper classımızın içerisinde ShipperID'yi aldık.
         [Required]
         public string Freight { get; set; }
         [Required]
