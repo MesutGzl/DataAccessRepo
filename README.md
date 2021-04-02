@@ -10,6 +10,7 @@ DatabaseFirst örneğini incelemek için nortwind sample database'ini code first
 
 # ORM(Object Relational Mapping)
   ORM, veri tabanı ile çalışırken tercih edilen mimarisel yaklaşımdır. ORM mimaris, veri tabanı ve uygulamada ihtiyaç duyulan varlığın her iki tarafta da bulunmasını isteyen bir prensibi vardır. Örnek vermek gerekirse Veri tabanımızda Products  isimli bir tablomuz var ise uygulama tarafında da gerekli CRUD işlemlerinin yürütülmesi için Application(uygulama) tarafında da aynı varlık ve tüm özelliklerinin bulunduğu bir Products.cs isminde bir class'a sahip olmamız gereklidir. 
+
 ![image](https://user-images.githubusercontent.com/71979276/113429724-ac259180-93e1-11eb-921b-b8694e81ad16.png)
 
 
