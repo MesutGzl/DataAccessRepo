@@ -34,7 +34,7 @@ Kod yazmadan ya da  database ile ilgilenmeden, tamamen model üzerinden veritaba
 
 
 ## Eager Loading
-Kullanacağımız nesneleri, nesnenin ihtiyaç anından çok önce yaratır ve bekletir. Eager loading Linq sorgusu çalıştırıldığında verilerin tamanını yükler ve havızada tutar. Lazy loadingde Products'tan Supplier firma isimlerini kolayca yapabilmiştik. Burada aynı sorguyu yapmak için Manuel olarak sorgumuza bazı eklemeler yapmak zorundayız.
+Kullanacağımız nesneleri, nesnenin ihtiyaç anından çok önce yaratır ve bekletir. Eager loading Linq sorgusu çalıştırıldığında verilerin tamanını yükler ve hafızada tutar. 
 
 ## Lazy Loading
 Bir nesne örneğinin ihtiyaç duyulacağı ana kadar alınmaması ve bekletilmesi prensibi ile çalışır. Bu yöntem ile veriler sorguya bağlı olarak çekilir. Veri setinin içindeki tüm dataları yüklemek yerine kullanılacağı an tekrar sorgu atar ve veriyi çeker.
