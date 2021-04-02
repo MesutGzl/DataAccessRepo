@@ -5,6 +5,8 @@
 
 >-[CodeFirst_2](https://github.com/MesutGzl/DataAccessRepo/tree/master/CodeFirst_2) => CodeFirst yaklaşımı ile CRUD işlemlerini içeren bir örnek
 
+>-[EagerLoadingvsLazyLoading](https://github.com/MesutGzl/DataAccessRepo/tree/master/LazyLoadingvsEagerLoading) => İki farklı yöntemin örnek üzerinden açıklaması
+
 
 DatabaseFirst örneğini incelemek için Northwind sample database'ini code first yaklaşımı ile yansımasını projeye eklemeniz gerekmektedir.
 
@@ -30,4 +32,11 @@ Database First yaklaşımının tam tersi gibi düşünülebilinir. Yani veri ta
 ## Model First
 Kod yazmadan ya da  database ile ilgilenmeden, tamamen model üzerinden veritabanı oluşturmak için kullanılan yaklaşımdır. Entity user interfacesi üzerinden modellediğiniz verilerinizi generate ettiğinizde hem database tarafında hem de kod tarafında otomatik olarak oluşurlar. Ne kadar basit gözükse de çok az kullanılır.
 
-[Gitbook Sayfam](https://mesut-guzel.gitbook.io/dataaccess/)
+
+## Eager Loading
+Kullanacağımız nesneleri, nesnenin ihtiyaç anından çok önce yaratır ve bekletir. Eager loading Linq sorgusu çalıştırıldığında verilerin tamanını yükler ve havızada tutar. Lazy loadingde Products'tan Supplier firma isimlerini kolayca yapabilmiştik. Burada aynı sorguyu yapmak için Manuel olarak sorgumuza bazı eklemeler yapmak zorundayız.
+
+## Lazy Loading
+Bir nesne örneğinin ihtiyaç duyulacağı ana kadar alınmaması ve bekletilmesi prensibi ile çalışır. Bu yöntem ile veriler sorguya bağlı olarak çekilir. Veri setinin içindeki tüm dataları yüklemek yerine kullanılacağı an tekrar sorgu atar ve veriyi çeker.
+
+[Konu ile ilgili Gitbook Sayfam](https://mesut-guzel.gitbook.io/dataaccess/)
