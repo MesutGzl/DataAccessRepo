@@ -4,3 +4,6 @@
 >-[CodeFirst](https://github.com/MesutGzl/DataAccessRepo/tree/master/CodeFirst) => CodeFirst kullanarak basit bir database oluşturma.
 
 >-[CodeFirst_2](https://github.com/MesutGzl/DataAccessRepo/tree/master/CodeFirst_2) => CodeFirst yaklaşımı ile CRUD işlemlerini içeren bir örnek
+
+
+DatabaseFirst örneğini incelemek için nortwind sample database'ini code first yaklaşımı ile yansımasını projeye eklemeniz gerekmektedir.
