@@ -6,7 +6,7 @@
 >-[CodeFirst_2](https://github.com/MesutGzl/DataAccessRepo/tree/master/CodeFirst_2) => CodeFirst yaklaşımı ile CRUD işlemlerini içeren bir örnek
 
 
-DatabaseFirst örneğini incelemek için nortwind sample database'ini code first yaklaşımı ile yansımasını projeye eklemeniz gerekmektedir.
+DatabaseFirst örneğini incelemek için Northwind sample database'ini code first yaklaşımı ile yansımasını projeye eklemeniz gerekmektedir.
 
 # ORM(Object Relational Mapping)
   ORM, veri tabanı ile çalışırken tercih edilen mimarisel yaklaşımdır. ORM mimaris, veri tabanı ve uygulamada ihtiyaç duyulan varlığın her iki tarafta da bulunmasını isteyen bir prensibi vardır. Örnek vermek gerekirse Veri tabanımızda Products  isimli bir tablomuz var ise uygulama tarafında da gerekli CRUD işlemlerinin yürütülmesi için Application(uygulama) tarafında da aynı varlık ve tüm özelliklerinin bulunduğu bir Products.cs isminde bir class'a sahip olmamız gereklidir. 
