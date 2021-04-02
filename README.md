@@ -30,4 +30,4 @@ Database First yaklaşımının tam tersi gibi düşünülebilinir. Yani veri ta
 ## Model First
 Kod yazmadan ya da  database ile ilgilenmeden, tamamen model üzerinden veritabanı oluşturmak için kullanılan yaklaşımdır. Entity user interfacesi üzerinden modellediğiniz verilerinizi generate ettiğinizde hem database tarafında hem de kod tarafında otomatik olarak oluşurlar. Ne kadar basit gözükse de çok az kullanılır.
 
-[Gitbook Sayfam](https://app.gitbook.com/@mesut-guzel/s/dataaccess/)
+[Gitbook Sayfam](https://mesut-guzel.gitbook.io/dataaccess/)
